@@ -8,7 +8,8 @@ const PORT = 3000;
 app.use(bodyParser.json());
 
 mongoose.connect(
-  "mongodb+srv://oshodingregory:kibagatsuga419@cluster0.alejsfs.mongodb.net/Node-API?retryWrites=true&w=majority"
+  "mongodb+srv://oshodingregory:kibagatsuga419@cluster0.alejsfs.mongodb.net/Node-API?retryWrites=true&w=majority",
+  { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
 const shopItemSchema = new mongoose.Schema({
