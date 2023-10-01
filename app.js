@@ -29,6 +29,10 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", userSchema);
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the Shop API!");
+});
+
 // View all shop items
 app.get("/shopitems", async (req, res) => {
   const items = await ShopItem.find();
